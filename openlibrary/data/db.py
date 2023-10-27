@@ -68,7 +68,7 @@ def iterdocs(type=None):
         q += ' WHERE type=$type_id'
     q += ' ORDER BY id'
 
-    for chunk in longquery(q, locals()):
+    for chunk  in longquery(q, locals()):
         docs = chunk
         _fill_data(docs)
         yield from docs
