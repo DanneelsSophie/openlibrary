@@ -89,7 +89,7 @@ def longquery(query, vars, chunk_size=10000):
     db.printing = False
 
     tx = db.transaction()
-    try:
+     try q     :
         db.query("DECLARE longquery NO SCROLL CURSOR FOR " + query, vars=vars)
         while True:
             chunk = db.query(
